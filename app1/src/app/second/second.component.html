@@ -1,0 +1,62 @@
+<p>
+  second works!
+</p>
+<div>
+<p class="card-panel teal lighten-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita quia id illum dolorem perferendis ullam sapiente unde accusamus? Eveniet laborum ea itaque accusantium architecto, adipisci unde doloremque dolores ducimus quisquam.</p> 
+</div>
+<div class="row">
+    <form class="col s12" #autoForm="ngForm" (ngSubmit)=onSubmit(autoForm)>
+      <div class="row">
+        <div class="input-field col s6">
+          <input required #champMarque ="ngModel"  name="marque" placeholder="Votre marque" id="marque" type="text" class="validate" [(ngModel)]="auto.marque">
+          <label for="marque">marque</label>
+          <div [hidden]= "champMarque.valid" >veuiller saisir le champ marque </div>  
+        </div>
+        <div class="input-field col s6">
+          <input required #champModel ="ngModel" id="model" placeholder="Votre model"  name="model" type="text" class="validate"  [(ngModel)]="auto.model">
+          <label for="model">model</label>
+          <div [hidden]= "champModel.valid" >veuiller saisir le champ model </div>  
+        </div>
+        <div class="input-field col s6">
+            <input id="pays" placeholder="Votre pays" name="pays" type="text" class="validated"  [(ngModel)]="auto.pays">
+            <label for="pays">pays</label>
+            <div [hidden]= "champPays.valid" >veuiller saisir le champ pays </div> 
+          </div>
+          <div class="input-field col s6">
+              <input  id="ident" placeholder="Votre id" name="ident" type="number" class="validate" [(ngModel)]="auto.id">
+              <label for="id">id</label>
+              <div [hidden]= "champIdent.valid" >veuiller saisir le champ identite </div> 
+            </div>
+      </div>
+      <button class="btn waves-effect waves-light" type="submit" name="action" [disabled] = "! autoForm.form.valid">Submit
+          <i class="material-icons right">send</i>
+        </button>
+     
+     
+      
+    </form>
+  </div>
+  <hr>
+  {{voitureForm.id}}
+  <table class = striped>
+    <thead>
+      <tr>
+      <th>#</th>
+      <th>Marque</th>
+
+      <th>Modele</th>
+        <th>Pays</th>
+     </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{voitureForm.id}}</td>
+        <td>{{voitureForm.marque}}</td>
+        <td>{{voitureForm.modele}}</td>
+        <td>{{voitureForm.pays}}</td>
+
+
+
+      </tr>
+    </tbody>
+  </table>

@@ -1,0 +1,10 @@
+.fond{
+    background-color: blue;
+    color:white;
+}
+.active{
+    background-color: blue;
+    color: white;
+    font-family: bold;
+}
+    

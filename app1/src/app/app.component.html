@@ -1,0 +1,56 @@
+<nav>
+    <a routerLink="/second" routerLinkActive="active">second | </a>
+    <a routerLink="/troisieme"routerLinkActive="active">troisieme | </a>
+    <a routerLink="/presentation">presentation | </a>
+    <a routerLink="/troisieme/param"routerLinkActive="active">troisieme_param | </a>
+
+
+  </nav>  
+  <router-outlet></router-outlet>
+   <!---- <h1>
+      Welcome to {{ title  | uppercase}}!
+    </h1>
+    <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+  </div>
+  <h2>{{titre}}</h2>
+  <p>{{contenu}}</p>
+  le nom de l'hauteur est : <i>{{auteur.nom}}</i>  <i>{{auteur.prenom}}</i>
+  <br>
+  <img src="assets/fleur.jpg" alt="" width="100" height="100">
+  <br>
+  {{2+4}}
+  
+  <br>
+  <p *ngIf = test [className]="couleur" >
+    <img [src]="image" alt="">
+    
+    vous devez payer 10 euro si vous etes majeur .
+  </p>
+  <ol *ngFor = "let jour of jours "> 
+    {{jour}}
+  </ol>--->
+  
+  <input type="text" [value]="title">
+  <!-- <p[innerText]="title"></p> -->
+  <!-- event binding -->
+  <button (click)="afficher()" >envoyer</button>
+ <!---two ways bindiong-->
+ <p>
+ <input type="text"[(ngModel)]="valeur"><br>
+ <!-- {{valeur*nombre}}-->
+    Le resultat est : {{res}}
+  </p>
+  <ul>
+    <li *ngFor= "let t of tab">{{t}}</li>
+    
+  </ul> 
+  <!---variable template-->
+  <input type="text" #champ> 
+  <button (click)="recuperer(champ.value)">Envoi</button> <br>
+  <!----Pipe-->
+  La date d'aujoud'hui: {{auj | date:"dd/MM/yy"}}
+  {{somme | currency: "EUR"}}
+
+ 
+  
+  

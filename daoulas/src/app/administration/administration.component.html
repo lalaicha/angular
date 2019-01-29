@@ -1,0 +1,20 @@
+<p>
+  administration works!
+</p>
+<table>
+  <thead>
+    <tr>
+      <th>id</th><th>auteur</th><th>contenu</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor= "let article of articles | async">
+      <td>{{article.id}}</td>
+      <td>{{article.auteur}}</td>
+      <td>{{article.contenu}}</td>
+      <td><img src={{article.url}} alt=""></td>
+      
+
+    </tr>
+  </tbody>
+</table>

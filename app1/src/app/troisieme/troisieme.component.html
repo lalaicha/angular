@@ -1,0 +1,15 @@
+<p>
+  {{donnees| json}}
+</p>
+
+<div class= "container">
+  <form [formGroup]="form" (ngSubmit) = "createForm()">
+
+    <input type="text" placeholder="nom" formControlName = "nom"> <br>
+    <input type="text" placeholder="prenom" formControlName = "prenom">
+    <textarea formControlName = "message" cols="30" rows="10" placeholder="message"></textarea><br>
+    <button type="submit">Envoyer</button>
+    </form>
+
+</div>
+{{ form.value | json}}
